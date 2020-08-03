@@ -105,15 +105,6 @@ sudo apt install fonts-firacode -y
 wget -O ~/.oh-my-zsh/themes/node.zsh-theme https://raw.githubusercontent.com/skuridin/oh-my-zsh-node-theme/master/node.zsh-theme 
 sed -i 's/.*ZSH_THEME=.*/ZSH_THEME="node"/g' ~/.zshrc
 
-echo 'installing meet franz' 
-wget https://github.com/meetfranz/franz/releases/download/v5.1.0/franz_5.1.0_amd64.deb -O franz.deb
-sudo dpkg -i franz.debchristian-kohler.path-intellisense
-sudo apt-get install -y -f 
-
-echo 'installing slack' 
-wget https://downloads.slack-edge.com/linux_releases/slack-desktop-3.3.8-amd64.deb
-sudo apt install ./slack-desktop-*.deb -y
-
 echo 'installing terminator'
 sudo apt-get update
 sudo apt-get install terminator -y
@@ -186,18 +177,6 @@ curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64
 sudo dpkg -i session-manager-plugin.deb
 session-manager-plugin --version
 
-echo 'installing teamviewer'
-wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
-sudo apt install -y ./teamviewer_amd64.deb
-
-echo 'installing vnc-viewer'
-sudo apt-get install -y --no-install-recommends ubuntu-desktop gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal
-sudo apt-get install vnc4server -y 
-
-echo 'installing fzf'
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install --all
-
 echo 'installing brave'
 curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
 source /etc/os-release
@@ -205,7 +184,10 @@ echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ $UBUNTU_C
 sudo apt update
 sudo apt install brave-keyring brave-browser
 
-echo 'installing dbeaver'
-wget -c https://dbeaver.io/files/6.0.0/dbeaver-ce_6.0.0_amd64.deb
-sudo dpkg -i dbeaver-ce_6.0.0_amd64.deb
-sudo apt-get install -f
+echo 'installing Electrum'
+sudo apt-get install python3-pyqt5 libsecp256k1-0 python3-cryptography
+wget https://download.electrum.org/4.0.2/Electrum-4.0.2.tar.gz
+
+echo 'installing BISQ'
+curl "https://bisq.network/downloads/v1.3.6/Bisq-64bit-1.3.6.deb" -o "bisq.deb"
+sudo dpkg -i bisq.deb
