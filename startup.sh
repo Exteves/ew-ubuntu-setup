@@ -187,6 +187,7 @@ sudo apt install brave-keyring brave-browser
 echo 'installing Electrum'
 sudo apt-get install python3-pyqt5 libsecp256k1-0 python3-cryptography
 wget https://download.electrum.org/4.0.2/Electrum-4.0.2.tar.gz
+tar -xvf Electrum-4.0.2.tar.gz
 
 echo 'installing BISQ'
 curl "https://bisq.network/downloads/v1.3.6/Bisq-64bit-1.3.6.deb" -o "bisq.deb"
