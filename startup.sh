@@ -192,3 +192,12 @@ tar -xvf Electrum-4.0.2.tar.gz
 echo 'installing BISQ'
 curl "https://bisq.network/downloads/v1.3.6/Bisq-64bit-1.3.6.deb" -o "bisq.deb"
 sudo dpkg -i bisq.deb
+
+echo 'installing Snap'
+sudo apt install snapd
+
+echo 'installing VLC'
+sudo snap install vlc
+
+echo 'installing Discord'
+sudo snap install discord
