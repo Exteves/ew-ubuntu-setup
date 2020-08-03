@@ -199,5 +199,8 @@ sudo dpkg -i bisq.deb
 echo 'installing VLC'
 sudo snap install vlc
 
+echo 'installing okular'
+sudo snap install okular
+
 echo 'installing Discord'
 sudo snap install discord
