@@ -204,3 +204,6 @@ sudo snap install okular
 
 echo 'installing Discord'
 sudo snap install discord
+
+echo 'installing BitTorrent'
+sudo apt-get install qbittorrent
